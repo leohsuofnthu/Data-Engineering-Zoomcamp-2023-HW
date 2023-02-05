@@ -38,8 +38,7 @@ storage:
   _is_anonymous: false
   block_type_slug: github
   _block_type_slug: github
-path: Week2/Homework
-entrypoint: etl_web_to_gcs.py:etl_parent_flow
+entrypoint: ./Week2/Homework/etl_web_to_gcs.py:etl_parent_flow
 parameter_openapi_schema:
   title: Parameters
   type: object
