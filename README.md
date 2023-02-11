@@ -21,7 +21,7 @@ Homework practice for the data engineering course provided by DataTalks.Club
 # Week 3
 <ul>
   <li>Data exploration with Google BigQuery</li>
-  <li>Concept of partitioning and clustering and query cost estimation in BigQuery</li>
+  <li>Concept of partitioning, clustering and query cost estimation in BigQuery</li>
   <li>Build and deploy ML models within Google BigQUery</li>
   <li>Concept of Data Warehouse and best practice of Google BigQuery</li>
 </ul>
