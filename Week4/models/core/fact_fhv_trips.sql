@@ -36,4 +36,4 @@ SELECT
     dropoff_zone,
     SR_flag
 FROM fhv_data_combined
-WHERE pickup_borough IS NOT NULL AND dropoff_borough IS NOT NULL;
+WHERE pickup_borough IS NOT NULL AND dropoff_borough IS NOT NULL
