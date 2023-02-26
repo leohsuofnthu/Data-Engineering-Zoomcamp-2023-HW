@@ -16,6 +16,8 @@ SELECT
     
 FROM {{ source('staging','fhv_tripdata_2019_bq') }}
 
-{% if var('is_test_run', false) %}
-TOP(100)
+
+-- dbt build --vars '{"is_test_run": "false"}'
+{% if var('is_test_run', true) %}
+    limit 100
 {% endif %} 
