@@ -1,16 +1,20 @@
 {{ config(materialized='view') }}
 
 SELECT 
-    cast(Dispatching_base_num as nvarchar(10)) as dispatching_base_num,
+    -- identifier
+    dispatching_base_num,
     cast(pulocationid as integer) as pickup_locationid,
     cast(dolocationid as integer) as dropoff_locationid,
 
-    Pickup_datetime,
-    DropOff_datetime,
- 
-    cast(SR_flag As integer) as SR_flag
+    --timestamp
+    cast(Pickup_datetime as timestamp) as pickup_datetime,
+    cast(DropOff_datetime as timestamp) as dropoff_datetime,
 
-FROM {{ source('staging','fhv_tripdata_2019') }}
+    -- trip info
+    sr_flag,
+    affiliated_base_number
+    
+FROM {{ source('staging','fhv_tripdata_2019_bq') }}
 
 {% if var('is_test_run', false) %}
 TOP(100)

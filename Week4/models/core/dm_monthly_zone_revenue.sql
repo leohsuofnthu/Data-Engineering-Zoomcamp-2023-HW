@@ -5,7 +5,7 @@ WITH trips_data AS (
 )
 SELECT
     pickup_zone AS revenue_zone,
-    MONTH(pickup_datetime) AS month,
+    EXTRACT(MONTH from pickup_datetime) AS month,
     service_type,
 
     sum(fare_amount) AS revenue_monthly_fare,
@@ -23,4 +23,4 @@ SELECT
     avg(trip_distance) AS avg_montly_trip_distance
 
 FROM trips_data
-GROUP BY pickup_zone, MONTH(pickup_datetime), service_type
+GROUP BY pickup_zone, EXTRACT(MONTH from pickup_datetime), service_type
