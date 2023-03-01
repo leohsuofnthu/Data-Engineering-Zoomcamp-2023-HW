@@ -25,3 +25,11 @@ Homework practice for the data engineering course provided by DataTalks.Club
   <li>Build and deploy ML models within Google BigQUery</li>
   <li>Concept of Data Warehouse and best practice of Google BigQuery</li>
 </ul>
+
+# Week 4
+<ul>
+  <li>Concept of data modeling and analytics engineering</li>
+  <li>ELT with dbt cloud and BigQuery</li>
+  <li>Visualizing the data with Looker</li>
+  <li>Testing, documenting, and deployment of dbt models</li>
+</ul>
